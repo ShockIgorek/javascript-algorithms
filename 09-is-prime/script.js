@@ -7,10 +7,21 @@
  * 
  * На вход функция должна принимать число n и возвращать true,
  * если n простое, и false — если нет.
-*/
+ */
 
 function isPrime(n) {
-    // Напишите код здесь
+    let result = true;
+    if (n === 0 || n === 1) {
+        result = false;
+    } else {
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                result = false;
+                break;
+            }
+        }
+    }
+    return result
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

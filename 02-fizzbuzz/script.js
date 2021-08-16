@@ -8,10 +8,21 @@
  * • кратные пяти — на buzz;
  * • кратные и трём, и пяти одновременно — на fizzbuzz.
  * 
-*/
-
+ */
 function fizzBuzz(num) {
-    // Напишите код здесь
+    for (let i = 1; i <= num; i++) {
+        let number = undefined;
+        if (i % 3 === 0 && i % 5 === 0) {
+            number = 'fizzbuzz'
+        } else if (i % 3 === 0) {
+            number = 'fizz'
+        } else if (i % 5 === 0) {
+            number = 'buzz'
+        } else {
+            number = i
+        }
+        console.log(number)
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

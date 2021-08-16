@@ -9,10 +9,19 @@
 */
 
 function reverseWords(str) {
-    // Напишите код здесь
+    str = str.replace(/ {1,}/g," ");
+    let width = str.split(' ');
+    let arr = [];
+    for (let i = 0 ; i < width.length; i++) {
+        arr.unshift(width[i])
+    }
+    return arr.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(reverseWords('всегда много путей достичь цель есть')); // "есть цель достичь путей много всегда"
 console.log(reverseWords('испробовать их все должны вы')); // "вы должны все их испробовать"
+
+
+console.log(reverseWords('раз   раз   раз это     Hard Bass')); //свой тест :)

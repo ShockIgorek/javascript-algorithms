@@ -6,12 +6,19 @@
  * есть какие-то два числа, чья сумма равна num. Если же такой пары чисел нет,
  * функция должна вернуть false.
  * 
-*/
+ */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
-}
+    for (let i = 0; i < arr.length; i++) {
+        for (let a = i + 1; a < arr.length; a++) {
+            if (arr[i] + arr[a] === sum) {
+                return true
+            }
+        }
+    }
+    return false
 
+}
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(sumOfTwo([1, 2, 3, 4, 5], 4)); // true (так как 1 + 3 === 4)

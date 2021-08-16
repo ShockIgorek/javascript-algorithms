@@ -11,22 +11,40 @@
  * Считайте, что на вход всегда передаётся слово: то есть знаков препинания
  * и пробелов в аргументе быть не может.
  * 
-*/
+ */
+
 
 function palindrome(str) {
-    // Напишите код здесь
+    if (typeof str !== "string" || str.length === 0) {
+        return true
+    } else {
+        let text = str.toLowerCase()
+        text = text.replace(/[^а-я, ^a-z]/g, "")
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === text[text.length - 1]) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
 }
 
+
 // Протестируйте решение, вызывая функцию с разными аргументами:
+
+
 
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
-
+// test
+console.log(palindrome('Я  яЯл яЯ   ,я'))
+console.log(palindrome('О, лета тело!'));
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
  * но пробелы и знаки препинания не учитывает. Например:
  * 
  * palindrome('О, лета тело!'); // true
  * 
-*/
+ */

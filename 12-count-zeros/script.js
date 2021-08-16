@@ -7,8 +7,10 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let count = Math.floor(n/10);
+    return count;
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

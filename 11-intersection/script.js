@@ -8,7 +8,10 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    let set1 = [...new Set(arr1)];
+    let set2 = [...new Set(arr2)];
+    let intersection = set1.filter(num => set2.includes(num));
+    return intersection
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
