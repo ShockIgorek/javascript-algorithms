@@ -15,19 +15,12 @@
 
 
 function palindrome(str) {
-    if (typeof str !== "string" || str.length === 0) {
-        return true
-    } else {
-        let text = str.toLowerCase()
-        text = text.replace(/[^а-я, ^a-z]/g, "")
-        for (let i = 0; i < text.length; i++) {
-            if (text[i] === text[text.length - 1]) {
-                return true
-            } else {
-                return false
-            }
-        }
+    if (typeof str !== "string"){
+        return false
     }
+    str = str.toLowerCase().replace(/[^a-zа-яё]/gi, '');
+    return str === str.split('').reverse().join('')
+
 }
 
 
@@ -41,6 +34,9 @@ console.log(palindrome('привет')); // false
 // test
 console.log(palindrome('Я  яЯл яЯ   ,я'))
 console.log(palindrome('О, лета тело!'));
+// свой тест 
+console.log(palindrome('Алиса'));
+
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
  * но пробелы и знаки препинания не учитывает. Например:
