@@ -7,12 +7,17 @@
  * 
  * ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].
  *
-*/
+ */
 
 function findVowels(str) {
-    //удалим согласные и символы и считаем :)
-    count = str.toLowerCase().replace(/[йцкнгшщзхъфвпрлджчсмтьб1234567890-= ]/gi, '');
-    return count.length;
+    let count = 0;
+    const arr = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+    for (let elem of str.toLowerCase()) {
+        if (arr.includes(elem)) {
+            count += 1;
+        }
+    }
+    return count
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

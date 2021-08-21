@@ -4,10 +4,19 @@
  * Напишите функцию countZeros(n), принимающую на вход натуральное число n.
  * Возвращать функция должна суммарное количество нулей, содержащихся во всех числах от 1 до n включительно.
  *
-*/
+ */
 
 function countZeros(n) {
-    let count = Math.floor(n/10);
+    if (n === 0)
+        return 0;
+    let count = 0;
+    if (n > 9)
+        count = countZeros(n - 1);
+    while (n > 0) {
+        if (n % 10 == 0)
+            count++;
+        n = Math.floor(n / 10);
+    }
     return count;
 }
 

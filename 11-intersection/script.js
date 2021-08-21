@@ -8,9 +8,9 @@
 */
 
 function intersection(arr1, arr2) {
-    let set1 = [...new Set(arr1)];
-    let set2 = [...new Set(arr2)];
-    let intersection = set1.filter(num => set2.includes(num));
+    const set1 = [...new Set(arr1)];
+    const set2 = [...new Set(arr2)];
+    const intersection = set1.filter(num => set2.includes(num));
     return intersection
 }
 

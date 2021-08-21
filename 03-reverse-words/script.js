@@ -10,8 +10,8 @@
 
 function reverseWords(str) {
     str = str.replace(/ {1,}/g," ");
-    let width = str.split(' ');
-    let arr = [];
+    const width = str.split(' ');
+    const arr = [];
     for (let i = 0 ; i < width.length; i++) {
         arr.unshift(width[i])
     }

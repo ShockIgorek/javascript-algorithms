@@ -7,7 +7,7 @@
  */
 
 function capitalize(str) {
-    newStr = str.replace(/( |^)[а-яёa-z]/g, function (x) {
+    const newStr = str.replace(/( |^)[а-яёa-z]/g, function (x) {
         return x.toUpperCase()
     })
     return newStr;

@@ -9,7 +9,7 @@
 
 function uniq(arr) {
     // на более ранних версиях js работать не будет.
-    let unique = [...new Set(arr)];
+    const unique = [...new Set(arr)];
     return unique
 }
 

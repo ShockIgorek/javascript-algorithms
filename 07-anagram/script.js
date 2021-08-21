@@ -9,13 +9,10 @@
  */
 
 function anagram(str1, str2) {
-    let arr1 = str1.toUpperCase().split('');
-    let arr2 = str2.toUpperCase().split('');
+    const arr1 = str1.toLowerCase().split('');
+    const arr2 = str2.toLowerCase().split('');
+    console.log(arr1, arr2)
 
-
-    arr1 = Array.isArray(arr1) ? arr1 : [];
-    arr2 = Array.isArray(arr2) ? arr2 : [];
-    
     return arr1.length === arr2.length && arr1.every(el => arr2.includes(el)) ;
     }
 
@@ -26,3 +23,5 @@ function anagram(str1, str2) {
 
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('hello', 'bye')); // false
+//свой тест, уважаемые, я не понимаю у меня этот тест проходит проверку и показывает "true", но ваши тесты, почему=то не проходит
+console.log(anagram('up', 'UP')); // true
